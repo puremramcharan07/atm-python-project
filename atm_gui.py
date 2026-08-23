@@ -13,9 +13,6 @@ def clear():
     for widget in root.winfo_children():
         widget.destroy()
 
-
-# ---------------- LOGIN ----------------
-
 def login_screen():
 
     clear()
@@ -67,7 +64,7 @@ def login_screen():
     ).pack()
 
 
-# ---------------- ACCOUNT ----------------
+
 
 def account_screen():
 
@@ -101,7 +98,7 @@ def account_screen():
     ).pack(pady=10)
 
 
-# ---------------- MAIN MENU ----------------
+
 
 def menu_screen():
 
@@ -156,7 +153,7 @@ def menu_screen():
     ).pack(pady=6)
 
 
-# ---------------- BALANCE ----------------
+
 
 def balance_screen():
 
@@ -211,8 +208,6 @@ def balance_screen():
         command=menu_screen
     ).pack()
 
-
-# ---------------- DEPOSIT ----------------
 
 def deposit_screen():
 
@@ -284,7 +279,6 @@ def deposit_screen():
     ).pack()
 
 
-# ---------------- WITHDRAWAL ----------------
 
 def withdrawal_screen():
 
@@ -369,8 +363,6 @@ def withdrawal_screen():
     ).pack()
 
 
-# ---------------- PIN CHANGE ----------------
-
 def pin_change_screen():
 
     clear()
@@ -446,9 +438,6 @@ def pin_change_screen():
         command=menu_screen
     ).pack()
 
-
-# ---------------- MINI STATEMENT ----------------
-
 def statement_screen():
 
     clear()
@@ -490,8 +479,6 @@ def statement_screen():
         command=menu_screen
     ).pack()
 
-
-# ---------------- START ----------------
 
 login_screen()
 
