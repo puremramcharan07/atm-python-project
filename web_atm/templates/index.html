@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ATM Simulation</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="atm-container">
+
+        <div class="atm-icon">
+            <i>💳</i>
+        </div>
+
+        <h1>ATM Simulation</h1>
+
+        <p class="subtitle">Secure ATM Login</p>
+
+        <form method="POST">
+
+            <label>Enter PIN</label>
+
+            <input
+                type="password"
+                name="pin"
+                maxlength="4"
+                placeholder="Enter 4-digit PIN"
+                required
+            >
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+        {% if message %}
+            <p class="error">{{ message }}</p>
+        {% endif %}
+
+    </div>
+
+</body>
+</html>

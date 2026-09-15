@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm Deposit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="atm-container">
+    <h1>Confirm Deposit</h1>
+
+    <div class="details">
+        {{ details|safe }}
+    </div>
+
+    <form method="POST" action="{{ url_for('confirm_deposit') }}">
+        <input type="hidden" name="amount" value="{{ amount }}">
+        <button type="submit">Confirm Deposit</button>
+    </form>
+
+    <a href="{{ url_for('deposit') }}">
+        <button>Cancel</button>
+    </a>
+</div>
+</body>
+</html>

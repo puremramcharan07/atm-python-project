@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="atm-container">
+
+    <h1>ATM</h1>
+    <h2>Select Account Type</h2>
+
+    <form method="POST">
+
+        <button type="submit" name="account" value="savings">
+            Savings Account
+        </button>
+
+        <button type="submit" name="account" value="current">
+            Current Account
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

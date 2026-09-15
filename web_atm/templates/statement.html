@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Statement</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="atm-container">
+    <h1>ATM</h1>
+    <h2>Mini Statement</h2>
+
+    <h3>Current Balance: ₹{{ balance }}</h3>
+
+    {% if transactions %}
+        {% for transaction in transactions %}
+            <p>{{ transaction }}</p>
+        {% endfor %}
+    {% else %}
+        <p>No transactions available.</p>
+    {% endif %}
+
+    <a href="{{ url_for('dashboard') }}">
+        <button>Back to Menu</button>
+    </a>
+</div>
+</body>
+</html>

@@ -4,7 +4,6 @@ pin = "7093"
 balance = 5000
 transactions = []
 
-
 # Balance Enquiry
 def check_balance(entered_pin):
 

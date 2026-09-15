@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change PIN</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="atm-container">
+    <h1>ATM</h1>
+    <h2>Change PIN</h2>
+
+    {% if message %}
+        <p class="error">{{ message }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <input type="text" name="mobile"
+               placeholder="Mobile Number" maxlength="10" required>
+
+        <input type="text" name="otp"
+               placeholder="Enter OTP" maxlength="4" required>
+
+        <input type="password" name="new_pin"
+               placeholder="New 4-digit PIN" maxlength="4" required>
+
+        <input type="password" name="confirm_pin"
+               placeholder="Confirm PIN" maxlength="4" required>
+
+        <button type="submit">Change PIN</button>
+    </form>
+
+    <p>Demo OTP: <b>1234</b></p>
+
+    <a href="{{ url_for('dashboard') }}">
+        <button>Back</button>
+    </a>
+</div>
+</body>
+</html>

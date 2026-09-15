@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm Withdrawal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="atm-container">
+    <h1>Confirm Withdrawal</h1>
+
+    <h2>Amount: ₹{{ amount }}</h2>
+
+    <form method="POST" action="{{ url_for('confirm_withdraw') }}">
+        <input type="hidden" name="amount" value="{{ amount }}">
+        <button type="submit">Confirm Withdrawal</button>
+    </form>
+
+    <a href="{{ url_for('withdrawal') }}">
+        <button>Cancel</button>
+    </a>
+</div>
+</body>
+</html>

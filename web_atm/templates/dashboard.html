@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATM Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="atm-container">
+
+    <h1>ATM</h1>
+    <h2>Welcome</h2>
+
+    <div class="menu">
+
+        <a href="{{ url_for('balance_enquiry') }}">
+            <button>Balance Enquiry</button>
+        </a>
+
+        <a href="{{ url_for('deposit') }}">
+            <button>Deposit Money</button>
+        </a>
+
+        <a href="{{ url_for('withdrawal') }}">
+            <button>Withdraw Money</button>
+        </a>
+
+        <a href="{{ url_for('pin_change') }}">
+            <button>Change PIN</button>
+        </a>
+
+        <a href="{{ url_for('statement') }}">
+            <button>Mini Statement</button>
+        </a>
+
+        <a href="{{ url_for('logout') }}">
+            <button>Logout</button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
